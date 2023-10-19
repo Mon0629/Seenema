@@ -1,0 +1,57 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.selected-button {
+    -fx-background-color: rgb(49, 36, 77);
+}
+
+
+
+/* Table header text style */
+.table-view .column-header .label {
+    -fx-text-fill: #FFFFFF;
+}
+/* Table view style */
+.table-view {
+    -fx-background-color: rgba(0, 0, 0, 0.15);
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-insets: 1.5px;
+    -fx-background-radius: 10px;
+    -fx-backdrop-color: blur(1.5px);
+    -fx-backdrop-opacity: 0.05;
+}
+
+/* Table column header style */
+.table-view .column-header {
+    -fx-background-color: black;
+
+}
+.buttonClass {
+
+
+    -fx-border-width: 1px;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #337fed;
+    -fx-background-radius: 6px;
+    -fx-background-color: linear-gradient(#3d94f6, #1e62d0);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 6px;
+    -fx-box-shadow: inset 0px 1px 0px 0px #97c4fe;
+    -fx-text-inner-color: white;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #1570cd, 0, 0, 0, 1);
+}
+
+.buttonClass:hover {
+    -fx-background-color: linear-gradient(#1e62d0, #3d94f6);
+}
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+
+

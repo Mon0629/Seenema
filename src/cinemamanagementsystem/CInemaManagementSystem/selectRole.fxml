@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="selectRoleWindow" prefHeight="537.0" prefWidth="769.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinemamanagementsystem.CInemaManagementSystem.SelectRoleController">
+    <stylesheets>
+        <URL value="@selectrole.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="539.0" fitWidth="776.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../Photos/Icon/photo_6249222478933111914_y.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="6.0" prefHeight="35.0" prefWidth="590.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="close" layoutX="562.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="32.0" prefWidth="19.0" styleClass="closeMinimize" stylesheets="@firstwindow.css" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="8.0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Photos/Icon/icons8-cancel-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="minimize" layoutX="532.0" layoutY="6.0" mnemonicParsing="false" onAction="#minimize" prefHeight="29.0" prefWidth="25.0" styleClass="closeMinimize" stylesheets="@firstwindow.css" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="9.0">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Photos/Icon/icons8-subtract-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="backbtn" layoutX="317.0" layoutY="461.0" mnemonicParsing="false" onAction="#back" prefHeight="15.0" prefWidth="145.0" styleClass="buttonContinue" stylesheets="@firstwindow.css" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="69.0" layoutY="166.0" prefHeight="260.0" prefWidth="198.0" styleClass="transparentContainer" stylesheets="@selectrole.css">
+         <children>
+            <Button fx:id="adminLogin" alignment="BOTTOM_CENTER" blendMode="OVERLAY" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#adminLog" prefHeight="240.0" prefWidth="184.0" styleClass="radius" stylesheets="@designdashboard.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="9.0" />
+            <ImageView fx:id="adminImage" fitHeight="260.0" fitWidth="145.0" layoutX="20.0" layoutY="-30.0" onMouseClicked="#handleImageViewClickAdmin" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="-30.0">
+               <image>
+                  <Image url="@../../Photos/Icon/Admin%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="297.0" layoutY="166.0" prefHeight="260.0" prefWidth="184.0" styleClass="transparentContainer" stylesheets="@selectrole.css">
+         <children>
+            <Button fx:id="userLogin" alignment="BOTTOM_CENTER" blendMode="OVERLAY" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#UserLog" prefHeight="240.0" prefWidth="184.0" styleClass="radius" stylesheets="@designdashboard.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0" />
+            <ImageView fx:id="userImage" fitHeight="260.0" fitWidth="145.0" layoutX="20.0" layoutY="-26.0" onMouseClicked="#handleImageViewClickUser" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Photos/Icon/User.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="512.0" layoutY="166.0" prefHeight="260.0" prefWidth="184.0" styleClass="transparentContainer" stylesheets="@selectrole.css">
+         <children>
+            <Button fx:id="employeeLogin" alignment="BOTTOM_CENTER" blendMode="OVERLAY" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#employeeLog" prefHeight="240.0" prefWidth="184.0" styleClass="radius" stylesheets="@designdashboard.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0" />
+            <ImageView fx:id="employeeImage" fitHeight="260.0" fitWidth="145.0" layoutX="20.0" layoutY="-24.0" onMouseClicked="#handleImageViewClickEmployee" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Photos/Icon/Employee.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

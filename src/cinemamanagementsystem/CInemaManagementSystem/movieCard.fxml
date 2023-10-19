@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="182.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinemamanagementsystem.CInemaManagementSystem.MovieCardController">
+   <children>
+      <VBox alignment="CENTER" layoutX="6.0" layoutY="13.0" prefHeight="241.0" prefWidth="170.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="13.0">
+         <children>
+            <Label fx:id="moviecard_name" contentDisplay="TOP" minHeight="0.0" minWidth="0.0" onMouseClicked="#bookingWindow" prefHeight="0.0" prefWidth="0.0" text="Name" visible="false" />
+            <Label fx:id="moviecard_rating" prefHeight="0.0" prefWidth="0.0" text="Rating" visible="false" />
+            <AnchorPane prefHeight="245.0" prefWidth="169.0">
+               <children>
+                  <ImageView fx:id="moviecard_poster" fitHeight="217.0" fitWidth="164.0" layoutX="2.0" layoutY="2.0" onMouseClicked="#bookingWindow" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

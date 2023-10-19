@@ -1,0 +1,22 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+/* Grey cell background */
+.table-cell {
+    -fx-background-color: #dddddd;
+}
+
+/* Light grey background for even cells */
+.table-row-cell:even .table-cell {
+    -fx-background-color: #eeeeee;
+}
+
+/* Darker background for odd cells */
+.table-row-cell:odd .table-cell {
+    -fx-background-color: #cccccc;
+}

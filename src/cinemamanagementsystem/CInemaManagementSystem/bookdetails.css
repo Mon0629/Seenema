@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.text-field-no-border {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: blue;
+    -fx-text-fill: blue; 
+    -fx-opacity: 0.5; /* Set the opacity of the line */
+    -fx-padding: 0 0 2 0; /* Optional: Add padding to adjust the vertical position of the text */
+}
+
+.text-field-no-border:focused {
+    -fx-border-color: blue; /* Optional: Change the border color when the text field is focused */
+}

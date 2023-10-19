@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="435.0" prefWidth="554.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinemamanagementsystem.CInemaManagementSystem.ThanksWindowController">
+    <stylesheets>
+        <URL value="@thankswindow.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="435.0" fitWidth="554.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../Photos/Icon/Thank%20You%20(2).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="returnHome" layoutX="153.0" layoutY="335.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="25.0" prefWidth="108.0" styleClass="containerMainglass" stylesheets="@thankswindow.css" text="return home" textFill="WHITE" />
+      <Button fx:id="BookingHisto" layoutX="278.0" layoutY="335.0" mnemonicParsing="false" onAction="#goBookings" prefHeight="27.0" prefWidth="139.0" styleClass="containerMainglass" stylesheets="@thankswindow.css" text="Booking History" textFill="WHITE" />
+   </children>
+</AnchorPane>

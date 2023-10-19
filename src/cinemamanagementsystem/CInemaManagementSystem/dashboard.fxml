@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="654.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinemamanagementsystem.CInemaManagementSystem.dashboardController">
+   <children>
+      <BorderPane fx:id="main_form" layoutX="-1.0" prefHeight="634.0" prefWidth="1126.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="634.0" prefWidth="225.0" styleClass="leftcontainer" stylesheets="@designdashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="115.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="131.0" layoutX="35.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Photos/Icon/pngwing.com%20(7).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="accounts_btn" layoutX="19.0" layoutY="216.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="39.0" prefWidth="184.0" styleClass="navigations" stylesheets="@designdashboard.css" text="     User Accounts">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="navigations">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-user-account-26.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="movies_btn" layoutX="19.0" layoutY="261.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="39.0" prefWidth="184.0" styleClass="navigations" stylesheets="@designdashboard.css" text="     My Movies     ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="navigations">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-movie-projector-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bookings_btn" layoutX="20.0" layoutY="307.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="39.0" prefWidth="179.0" styleClass="navigations" stylesheets="@designdashboard.css" text="      Bookings       ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="navigations">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-booking-67.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="about_btn" alignment="CENTER" layoutX="20.0" layoutY="352.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="39.0" prefWidth="182.0" styleClass="navigations" stylesheets="@designdashboard.css" text="      About            ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="navigations">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-about-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logout" layoutX="25.0" layoutY="559.0" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="27.0" styleClass="close" stylesheets="@designdashboard.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-logout-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="72.0" layoutY="613.0" text="Sign out">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="dashboard_btn" layoutX="21.0" layoutY="176.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="39.0" prefWidth="184.0" styleClass="navigations" stylesheets="@designdashboard.css" text="     Dashboard" AnchorPane.bottomAnchor="444.0" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="176.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="navigations">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-dashboard-layout-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="634.0" prefWidth="910.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="dashboard_form" prefHeight="654.0" prefWidth="901.0" styleClass="rightcontainer" stylesheets="@designdashboard.css">
+                     <children>
+                        <Label layoutX="31.0" layoutY="46.0" text="Hello, Admin">
+                           <font>
+                              <Font name="System Bold" size="33.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="95.0" text="Welcome back!" textFill="#808080">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="280.0" layoutY="362.0" prefHeight="122.0" prefWidth="249.0">
+                           <children>
+                              <Label layoutX="18.0" layoutY="20.0" text="Total Tickets Sold">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalTicketSold" layoutX="18.0" layoutY="57.0" prefHeight="43.0" prefWidth="105.0" text="134" AnchorPane.bottomAnchor="14.0">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView blendMode="MULTIPLY" fitHeight="42.0" fitWidth="88.0" layoutX="139.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.2625007629394531" AnchorPane.leftAnchor="139.0">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(12).png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="60.0" fitWidth="78.0" layoutX="151.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="32.0">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(19).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="containerMainColor" />
+                              <String fx:value="containerglass" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane layoutX="281.0" layoutY="501.0" prefHeight="131.0" prefWidth="247.0" stylesheets="@designdashboard.css">
+                           <styleClass>
+                              <String fx:value="containerMainColor" />
+                              <String fx:value="containerglass" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="20.0" layoutY="20.0" text="Total Income">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalIncome" layoutX="20.0" layoutY="60.0" prefHeight="43.0" prefWidth="105.0" text="₱ 457.55" AnchorPane.bottomAnchor="14.0">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView blendMode="MULTIPLY" fitHeight="42.0" fitWidth="88.0" layoutX="145.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.7374992370605469" AnchorPane.leftAnchor="139.0">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(12).png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="66.0" fitWidth="90.0" layoutX="136.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(18).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="357.0" layoutY="14.0" prefHeight="199.0" prefWidth="321.0" styleClass="containerglass" stylesheets="@designdashboard.css">
+                           <children>
+                              <BarChart fx:id="accounts_chart" layoutX="2.0" layoutY="52.0" legendSide="LEFT" prefHeight="150.0" prefWidth="308.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                              <Label layoutX="27.0" layoutY="14.0" prefHeight="21.0" prefWidth="90.0" text="Analytics">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="33.0" text="User Accounts" textFill="#656262" AnchorPane.topAnchor="37.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="555.0" layoutY="444.0" prefHeight="182.0" prefWidth="321.0" styleClass="containerglass" stylesheets="@designdashboard.css">
+                           <children>
+                              <LineChart fx:id="itemSold_chart" layoutX="3.0" layoutY="13.0" prefHeight="175.0" prefWidth="200.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                              <Label layoutX="207.0" layoutY="25.0" prefHeight="25.0" prefWidth="95.0" text="Tickets Sales" AnchorPane.leftAnchor="210.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="223.0" layoutY="38.0" prefHeight="25.0" prefWidth="52.0" text="Item Sold" textFill="#838383" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="362.0" prefHeight="122.0" prefWidth="249.0">
+                           <children>
+                              <Label layoutX="18.0" layoutY="20.0" text="Total Movies Availble">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalTicketSold1" layoutX="18.0" layoutY="57.0" prefHeight="43.0" prefWidth="105.0" text="134" AnchorPane.bottomAnchor="14.0">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView blendMode="MULTIPLY" fitHeight="42.0" fitWidth="88.0" layoutX="139.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.2625007629394531" AnchorPane.leftAnchor="139.0">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(12).png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="60.0" fitWidth="78.0" layoutX="151.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="32.0">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(19).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="containerMainColor" />
+                              <String fx:value="containerglass" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane layoutX="15.0" layoutY="501.0" prefHeight="131.0" prefWidth="247.0" stylesheets="@designdashboard.css">
+                           <styleClass>
+                              <String fx:value="containerMainColor" />
+                              <String fx:value="containerglass" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="20.0" layoutY="20.0" text="Total User/Customer">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalUser" layoutX="20.0" layoutY="60.0" prefHeight="43.0" prefWidth="105.0" text="₱ 457.55" AnchorPane.bottomAnchor="14.0">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView blendMode="MULTIPLY" fitHeight="42.0" fitWidth="88.0" layoutX="145.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.7374992370605469" AnchorPane.leftAnchor="139.0">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(12).png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="66.0" fitWidth="90.0" layoutX="136.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Photos/Icon/pngwing.com%20(18).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="21.0" layoutY="132.0" prefHeight="199.0" prefWidth="321.0" styleClass="containerglass" stylesheets="@designdashboard.css">
+                           <children>
+                              <BarChart fx:id="accounts_chart1" layoutX="2.0" layoutY="52.0" legendSide="LEFT" prefHeight="150.0" prefWidth="308.0">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                              <Label layoutX="27.0" layoutY="14.0" prefHeight="21.0" prefWidth="90.0" text="Analytics">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="33.0" text="Total Movies" textFill="#656262" AnchorPane.topAnchor="37.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="555.0" layoutY="226.0" prefHeight="199.0" prefWidth="321.0" styleClass="containerglass" stylesheets="@designdashboard.css">
+                           <children>
+                              <BarChart fx:id="accounts_chart2" layoutX="2.0" layoutY="52.0" legendSide="LEFT" prefHeight="150.0" prefWidth="308.0">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                              <Label layoutX="27.0" layoutY="14.0" prefHeight="21.0" prefWidth="90.0" text="Analytics">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="33.0" text="Income Report" textFill="#656262" AnchorPane.topAnchor="37.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="account_form" layoutX="-1.0" layoutY="-6.0" prefHeight="634.0" prefWidth="904.0" styleClass="rightcontainer" stylesheets="@designdashboard.css" visible="false" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-6.0">
+                     <children>
+                        <Label layoutX="38.0" layoutY="47.0" text="Account Login History">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="account_search" layoutX="38.0" layoutY="104.0" onAction="#search" prefHeight="25.0" prefWidth="178.0" promptText="Search" styleClass="containerglass" stylesheets="@designdashboard.css" AnchorPane.leftAnchor="38.0" />
+                        <TableView fx:id="table" layoutX="38.0" layoutY="147.0" prefHeight="459.0" prefWidth="582.0" stylesheets="@designdashboard.css" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="147.0">
+                          <columns>
+                            <TableColumn fx:id="DateTimeColmn" prefWidth="193.0" text="Date and time" />
+                            <TableColumn fx:id="IDColmn" prefWidth="72.0" text="Id" />
+                              <TableColumn fx:id="EmailColmn" minWidth="0.0" prefWidth="166.0" text="Email" />
+                              <TableColumn fx:id="UsernameColmn" minWidth="0.0" prefWidth="155.0" text="Username" />
+                          </columns>
+                           <styleClass>
+                              <String fx:value="containerglass" />
+                              <String fx:value="table-cell" />
+                              <String fx:value="table-row-cell" />
+                           </styleClass>
+                        </TableView>
+                        <TextField fx:id="txtEmail" layoutX="684.0" layoutY="256.0" />
+                        <Label layoutX="684.0" layoutY="229.0" text="Email:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="684.0" layoutY="292.0" text="Username:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtUsername" layoutX="685.0" layoutY="315.0" />
+                        <Button fx:id="btnUpdate" layoutX="683.0" layoutY="436.0" mnemonicParsing="false" onAction="#Update" prefHeight="25.0" prefWidth="155.0" styleClass="FinanceReport" stylesheets="@designdashboard.css" text="Update" />
+                        <Button fx:id="btnDelete" layoutX="683.0" layoutY="475.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="155.0" styleClass="FinanceReport" stylesheets="@designdashboard.css" text="Delete" />
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="movies_form" layoutX="-225.0" prefHeight="654.0" prefWidth="1126.0" styleClass="rightcontainer" stylesheets="@designdashboard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="314.0" prefWidth="861.0" stylesheets="@designdashboard.css" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+                           <styleClass>
+                              <String fx:value="containerglass" />
+                              <String fx:value="containerglass" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="movies_inventoryTV" layoutX="14.0" layoutY="14.0" prefHeight="288.0" prefWidth="833.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <columns>
+                                    <TableColumn fx:id="movies_col_IDMovies" prefWidth="70.0" text="ID Movies" />
+                                    <TableColumn fx:id="movies_col_Title" prefWidth="103.0" text="Title" />
+                                    <TableColumn fx:id="movies_col_Genre" prefWidth="69.0" text="Genre" />
+                                    <TableColumn fx:id="movies_col_Price" prefWidth="78.0" text="Price" />
+                                    <TableColumn fx:id="movies_col_Sypnosis" prefWidth="120.0" text="Sypnosis" />
+                                    <TableColumn fx:id="movies_col_Duration" prefWidth="84.0" text="Duration" />
+                                    <TableColumn fx:id="movies_col_Time" text="Time" />
+                                    <TableColumn fx:id="movies_col_Director" minWidth="9.0" prefWidth="90.0" text="Director" />
+                                    <TableColumn fx:id="movies_col_Cast" minWidth="0.0" prefWidth="75.0" text="Cast" />
+                                    <TableColumn fx:id="movies_col_Rating" minWidth="0.0" prefWidth="63.0" text="Rating" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Separator prefHeight="1.0" prefWidth="861.0" AnchorPane.bottomAnchor="281.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="370.0" />
+                        <AnchorPane prefHeight="248.0" prefWidth="861.0" stylesheets="@designdashboard.css" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="385.0">
+                           <styleClass>
+                              <String fx:value="containerglass" />
+                              <String fx:value="containerglass" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="20.0" layoutY="32.0" prefHeight="25.0" prefWidth="99.0" text="ID Movies:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_IDMovie" layoutX="112.0" layoutY="32.0" prefHeight="25.0" prefWidth="179.0" />
+                              <Label layoutX="20.0" layoutY="63.0" prefHeight="25.0" prefWidth="99.0" text="Title:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="20.0" layoutY="92.0" prefHeight="25.0" prefWidth="99.0" text="Genre:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="20.0" layoutY="153.0" prefHeight="25.0" prefWidth="99.0" text="Sypnosis:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_Title" layoutX="112.0" layoutY="63.0" prefHeight="25.0" prefWidth="179.0" />
+                              <TextField fx:id="txt_Genre" layoutX="112.0" layoutY="92.0" prefHeight="25.0" prefWidth="179.0" />
+                              <TextField fx:id="txt_Sypnosis" layoutX="112.0" layoutY="154.0" prefHeight="76.0" prefWidth="179.0" />
+                              <Label layoutX="317.0" layoutY="32.0" prefHeight="25.0" prefWidth="99.0" text="Duration:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="317.0" layoutY="63.0" prefHeight="25.0" prefWidth="99.0" text="Time:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="317.0" layoutY="92.0" prefHeight="25.0" prefWidth="99.0" text="Director:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="317.0" layoutY="147.0" prefHeight="25.0" prefWidth="99.0" text="Rating:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_Duration" layoutX="406.0" layoutY="32.0" prefHeight="25.0" prefWidth="160.0" promptText="00:00" />
+                              <TextField fx:id="txt_Director" layoutX="406.0" layoutY="96.0" prefHeight="43.0" prefWidth="160.0" />
+                              <Label layoutX="317.0" layoutY="182.0" prefHeight="25.0" prefWidth="99.0" text="Cast:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_Cast" layoutX="406.0" layoutY="182.0" prefHeight="50.0" prefWidth="160.0" />
+                              <AnchorPane layoutX="593.0" layoutY="29.0" prefHeight="161.0" prefWidth="134.0" styleClass="containerglass" stylesheets="@designdashboard.css">
+                                 <children>
+                                    <ImageView fx:id="ImportImageView" fitHeight="165.0" fitWidth="134.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="ImportBtn" layoutX="594.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" styleClass="selected-button" stylesheets="@designdashboard.css" text="Import" />
+                              <Button fx:id="AddBtn" layoutX="750.0" layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" styleClass="selected-button" stylesheets="@designdashboard.css" text="Add" AnchorPane.topAnchor="51.0" />
+                              <Button fx:id="UpdateBtn" layoutX="750.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" styleClass="selected-button" stylesheets="@designdashboard.css" text="Update" />
+                              <Button fx:id="ClearBtn" layoutX="750.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" styleClass="selected-button" stylesheets="@designdashboard.css" text="Clear" />
+                              <Button fx:id="DeleteBtn" layoutX="750.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" styleClass="selected-button" stylesheets="@designdashboard.css" text="Delete" />
+                              <ComboBox fx:id="ChooseTime" layoutX="492.0" layoutY="64.0" prefHeight="25.0" prefWidth="74.0" AnchorPane.topAnchor="64.0" />
+                              <ComboBox fx:id="ChooseRate" layoutX="491.0" layoutY="143.0" prefHeight="25.0" prefWidth="75.0" AnchorPane.topAnchor="147.0" />
+                              <TextField fx:id="txt_Price" layoutX="112.0" layoutY="127.0" prefHeight="25.0" prefWidth="179.0" AnchorPane.bottomAnchor="100.0" />
+                              <Label layoutX="20.0" layoutY="123.0" prefHeight="25.0" prefWidth="99.0" text="Price:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_Time" layoutX="406.0" layoutY="64.0" prefHeight="25.0" prefWidth="78.0" />
+                              <TextField fx:id="txt_Rate" layoutX="406.0" layoutY="147.0" prefHeight="25.0" prefWidth="78.0" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="bookings_form" prefHeight="654.0" prefWidth="901.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="349.0" layoutY="301.0" text="RR THE BEST">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="about_form" prefHeight="654.0" prefWidth="901.0" styleClass="rightcontainer" stylesheets="@designdashboard.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="385.0" layoutY="306.0" text="HATDOG">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane prefHeight="34.0" prefWidth="1126.0">
+         <children>
+            <AnchorPane prefHeight="34.0" prefWidth="1107.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="close" layoutX="948.0" mnemonicParsing="false" onAction="#close" prefHeight="32.0" prefWidth="44.0" styleClass="close" stylesheets="@designdashboard.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-exit-32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="minimize" layoutX="1046.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimize" prefHeight="32.0" prefWidth="44.0" styleClass="close" stylesheets="@designdashboard.css" AnchorPane.topAnchor="1.0">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Photos/Icon/icons8-subtract-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

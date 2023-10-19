@@ -1,0 +1,179 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.leftContainer {
+    -fx-border-color: transparent transparent rgba(128, 128, 128, 0.5) transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+.rightContainer{
+    -fx-background-color: rgb(66,57,98);
+}
+.signOut{
+    -fx-background-color: transparent;
+}
+.signOut:hover{
+    -fx-background-color: rgb(49, 36, 77);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.signOut:pressed{
+    -fx-background-color: rgb(49, 36, 77);
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+.closeMinimize{
+    -fx-background-color: transparent;
+}
+.closeMinimize:hover{
+    -fx-background-color: rgb(59, 46, 87);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.closeMinimize:pressed{
+    -fx-background-color: rgb(59, 46, 87);
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+.buttonNavigtaion{
+    -fx-background-color: transparent;
+}
+.buttonNavigtaion:hover {
+    -fx-background-color: rgb(49, 36, 77);
+    -fx-background-radius: 10px;
+}
+
+.buttonNavigtaion:pressed {
+    -fx-background-color: rgb(49, 36, 77);
+    -fx-background-radius: 10px;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+.selected-button {
+    -fx-background-color: rgb(49, 36, 77);
+}
+.table-cell{
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 2px;
+    -fx-border-width: 0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+
+.table-view .scroll-bar:horizontal {
+-fx-background-color: rgba(255, 255, 255, 0.05);
+}
+.input{
+    -fx-background-color: rgba(183, 183, 183, 0.05);
+    -fx-border-radius: 40px 40px 0px 0px;
+    -fx-border-width: 1px;
+}
+.inputTop {
+    -fx-background-color: rgba(183, 183, 183, 0.05);
+    -fx-background-radius: 0 0 20px 20px;
+    -fx-border-width: 0 1px 0 1px;
+    -fx-border-color: transparent;
+}
+
+.usertable{
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 10px;
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-insets: 3px;
+    -fx-border-insets: 3px;
+}
+
+.textfieldStyle {
+    -fx-background-color: #808080;
+    -fx-text-fill: white;
+}
+
+
+.employeetable{
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 10px;
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-insets: 3px;
+    -fx-border-insets: 3px;
+}
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+.separator {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-border-color: rgba(128, 128, 128, 0.2);
+    -fx-border-width: 0 0 1px 0;
+}
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+}
+
+.table-view .column-header:first-child .label {
+    -fx-text-fill: #3d94f6;
+}
+.buttons{
+    -fx-background-color: transparent;
+    -fx-scale-x: 1.00;
+    -fx-scale-y: 1.00;
+}
+.buttons:hover{
+    -fx-background-color: transparent;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;}
+.buttons:pressed{
+    -fx-background-color: transparent;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+
+.buttonClass {
+
+    -fx-pref-width: 119px;
+    -fx-pref-height: 32px;
+    -fx-border-width: 1px;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #337fed;
+    -fx-background-radius: 6px;
+    -fx-background-color: linear-gradient(#3d94f6, #1e62d0);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 6px;
+    -fx-box-shadow: inset 0px 1px 0px 0px #97c4fe;
+    -fx-text-inner-color: white;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #1570cd, 0, 0, 0, 1);
+}
+
+.buttonClass:hover {
+    -fx-background-color: linear-gradient(#1e62d0, #3d94f6);
+}
+
+.chart-bar {
+    -fx-bar-fill: lightorange;
+}
+
+.chart-bar-label {
+    -fx-text-fill: white;
+
+}

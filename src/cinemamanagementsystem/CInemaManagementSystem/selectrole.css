@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.transparentContainer{
+    -fx-background-color: transparent;
+}
+.transparentContainer:hover{
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.transparentContainer:pressed{
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}

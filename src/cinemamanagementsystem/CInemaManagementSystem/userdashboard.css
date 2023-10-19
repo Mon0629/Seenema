@@ -1,0 +1,134 @@
+.leftContainer {
+    -fx-border-color: transparent rgba(128, 128, 128, 0.5) transparent transparent;
+    -fx-border-width: 0 1px 0 0;
+}
+.rightContainer{
+    -fx-background-color: rgb(66,57,98);
+}
+.signOut{
+    -fx-background-color: transparent;
+}
+.signOut:hover{
+    -fx-background-color: rgb(49, 36, 77);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.signOut:pressed{
+    -fx-background-color: rgb(49, 36, 77);
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+.closeMinimize{
+    -fx-background-color: transparent;
+}
+.closeMinimize:hover{
+    -fx-background-color: rgb(59, 46, 87);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.closeMinimize:pressed{
+    -fx-background-color: rgb(59, 46, 87);
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+.buttonNavigtaion{
+    -fx-background-color: transparent;
+}
+.buttonNavigtaion:hover {
+    -fx-background-color: rgba(128, 128, 128, 0.2);
+    -fx-border-color: rgba(128, 128, 128, 0.2);
+    -fx-border-width: 1px;
+}
+
+.buttonNavigtaion:pressed {
+    -fx-background-color: rgb(49, 36, 77);
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+.selected-button {
+    -fx-background-color: rgba(128, 128, 128, 0.2);
+    -fx-border-color: rgba(128, 128, 128, 0.2);
+    -fx-border-width: 1px;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.text-hover-glow {
+    -fx-fill: white;
+    -fx-transition: all 0.3s;
+}
+
+.text-hover-glow:hover {
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    -fx-scale-x: 1.2;
+    -fx-underline: true;
+    -fx-scale-y: 1.2;
+}
+
+.text-hover-glow:pressed {
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-underline: true;
+
+}
+.button-hover-glow {
+    -fx-fill: white;
+    -fx-transition: all 0.3s;
+}
+
+.button-hover-glow:hover {
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.button-hover-glow:pressed {
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+.image {
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-animation: scaleAnimation 1s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+    50% {
+        -fx-scale-x: 1.1;
+        -fx-scale-y: 1.1;
+    }
+    100% {
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+}
+
+.buttonContinue {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 10px;
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-border-width: 1px;
+}
+
+.buttonContinue:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 10px;
+    -fx-border-color: rgba(255, 255, 255, 0.8); /* Bold white border color */
+    -fx-border-width: 2px; /* Triple the border width */
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.buttonContinue:pressed {
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
